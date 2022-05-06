@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam_2</title>
+</head>
+
+<body>
+    <script>
+        function findInArray() {
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            let number = Number(prompt('Nhập vào giá trị bất kì:'));
+            for (let i = 0; i < arr.length; i++) {
+                if (number == arr[i]) {
+                    document.write(`${number} có ở trong mảng arr`);
+                    break;
+                }
+                else {
+                    if (i == arr.length - 1) {
+                        document.write(`${number} không có ở trong mảng arr`);
+                    }
+                }
+            }
+        }
+        findInArray();
+    </script>
+</body>
+
+</html>
