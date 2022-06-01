@@ -10,8 +10,9 @@
 
 <body>
     <script>
-        function searchArray(Array) {
-            let i = 0, j = 0, count = 0, arrayCharacter = ["a", "o", "e", "u", "i"];
+        const arrayCharacter = ["a", "o", "e", "u", "i"];
+        function vowelCharacter(Array) {
+            let i = 0, j = 0, count = 0;
             for (i = 0; i < Array.length; i++) {
                 for (j = 0; j < arrayCharacter.length; j++) {
                     if (Array[i].toLowerCase() == arrayCharacter[j]) {
@@ -26,9 +27,8 @@
                 return false;
             };
         };
-        let stringValue = "Luong Khong He Ngu";
-        let arrayValue = stringValue.split("");
-        alert(`Kí tự nguyên âm cuối tìm thấy ở vị trị: ${searchArray(arrayValue)}`);
+        let arrayValue = "Nguyen Tan Luong".split("");
+        alert(`Chuỗi [${arrayValue}] có ${vowelCharacter(arrayValue)} kí tự nguyên âm của mảng [${arrayCharacter}].`);
     </script>
 
 </html>

@@ -14,22 +14,24 @@
             constructor(Fullname, Email) {
                 this.Fullname = Fullname;
                 this.Email = Email;
-                this.setFullname = function (Value) {
-                    return this.Fullname = Value;
-                };
-                this.getFullname = function () {
-                    return this.Fullname;
-                };
-                this.setEmail = function (Value) {
-                    return this.Email = Value;
-                };
-                this.getEmail = function () {
-                    return this.Email;
-                };
-                this.toString = function () {
-                    return `Fullname: ${this.Fullname}<br>Email: ${this.Email}<br><br>`;
-                };
             };
+
+            setFullname = function (Value) {
+                return this.Fullname = Value;
+            };
+            getFullname = function () {
+                return this.Fullname;
+            };
+            setEmail = function (Value) {
+                return this.Email = Value;
+            };
+            getEmail = function () {
+                return this.Email;
+            };
+            toString = function () {
+                return `Fullname: ${this.Fullname}<br>Email: ${this.Email}<br><br>`;
+            };
+
         };
         const david = new Staff("David", "david@gmail.com");
         david.setFullname("David Do");
@@ -37,13 +39,16 @@
         document.write(david.toString());
         const staffs = [
             david,
-            new Staff("Luong", "luong@gmail.com;"),
-            new Staff("Ngoc", "ngoc@gmail.com"),
-            new Staff("Tri", "tri@gmail.com"),
+            new Staff("Nguyen Tan Luong", "luong@gmail.com;"),
+            new Staff("Le Huu Tien", "tien@gmail.com"),
+            new Staff("Nguyen Huu Quy", "quy@gmail.com"),
         ];
         for (let i = 0; i < staffs.length; i++) {
             document.write(staffs[i].toString());
         };
+        // staffs.forEach(item => {
+        //     document.write(item.toString())
+        // })
     </script>
 </body>
 

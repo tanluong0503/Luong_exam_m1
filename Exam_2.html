@@ -10,22 +10,18 @@
 
 <body>
     <script>
-        function findInArray() {
-            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-            let number = Number(prompt('Nhập vào giá trị bất kì:'));
-            for (let i = 0; i < arr.length; i++) {
-                if (number == arr[i]) {
-                    document.write(`${number} có ở trong mảng arr`);
-                    break;
-                }
-                else {
-                    if (i == arr.length - 1) {
-                        document.write(`${number} không có ở trong mảng arr`);
-                    }
+        let i;
+        let a = prompt("Nhập số cần tìm");
+        let arr = [1, 2, 3, 4, 9];
+        function findindex(number, arr) {
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == number) {
+                    return alert(` số cần tìm nằm ở vị trí${i} `);
                 }
             }
+            return alert('số này không có trong mảng');
         }
-        findInArray();
+        findindex(a, arr);
     </script>
 </body>
 
